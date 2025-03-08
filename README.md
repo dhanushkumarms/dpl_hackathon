@@ -107,16 +107,6 @@ Web Deployment: Plan to deploy using Flask/Django for interactive predictions.
 
 Hyperparameter Optimization: Future improvements with GridSearchCV for fine-tuning.
 
-❓ Troubleshooting & FAQs
-
-Q1: Why am I getting module errors?Ensure all dependencies are installed using pip install -r requirements.txt. If using Colab, manually install missing libraries:
-
-!pip install xgboost pandas matplotlib seaborn
-
-Q2: How long does the model take to train?On a standard CPU, training takes a few minutes. Using Google Colab GPU can significantly speed up processing.
-
-Q3: Can I use my own dataset?Yes! Replace the existing CSV files with your own structured race data.
-
 🎯 Conclusion
 
 This project provides a data-driven approach to Formula 1 race predictions, helping teams and analysts optimize race strategies. Future enhancements will integrate real-time data, advanced ML models, and web-based prediction tools.
