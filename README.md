@@ -1,115 +1,125 @@
-🏎️ F1 Race Prediction - Complete Setup Guide
+# 🏎️ F1 Race Prediction
 
-📌 Overview
+This project predicts Formula 1 race positions using machine learning (XGBoost). It analyzes historical race data—including driver performance, team strength, pit stops, lap times, and more—to forecast race outcomes with high accuracy.
 
-This project predicts Formula 1 race positions using machine learning (XGBoost). It analyzes historical F1 race data, including driver performance, team strength, pit stops, and lap times, to forecast race outcomes accurately.
+---
 
-🚀 Running the Project Locally (GitHub)
+## 📌 Overview
 
-1️⃣ Clone the Repository
+An end-to-end predictive analytics pipeline for F1 racing that includes:
+- Data preprocessing and feature engineering
+- Model training using XGBoost Regressor
+- Evaluation via MAE, RMSE, R²
+- Visualization of predictions vs actuals
 
-To get started, clone the repository from GitHub:
+---
 
+## 🚀 Running the Project Locally
+
+### 1️⃣ Clone the Repository
+```bash
 git clone https://github.com/dhanushkumarms/dpl_hackathon.git
 cd dpl_hackathon
+```
 
-2️⃣ Install Dependencies
-
-Ensure all required libraries are installed:
-
+### 2️⃣ Install Dependencies
+```bash
 pip install -r requirements.txt
+```
 
-3️⃣ Run the Model
-
-Execute the Python script to train and test the model:
-
+### 3️⃣ Run the Model
+```bash
 python f1_prediction.py
+```
 
-4️⃣ Understanding the Output
+### 4️⃣ Output Includes
+- 📊 **Predicted Positions**
+- 📈 **Evaluation Metrics**: MAE, RMSE, R²
+- 📉 **Visualization**: Actual vs. Predicted Scatterplots
 
-Predictions: Displays predicted driver positions.
+---
 
-Performance Metrics: Outputs MAE, RMSE, and R² scores.
+## 🌐 Running on Google Colab
 
-Visualization: Generates graphs showing actual vs. predicted positions.
-
-🌐 Running the Project on Google Colab
-
-1️⃣ Open Google Colab & Mount Drive
-
-Mount your Google Drive to access files:
-
+### 1️⃣ Mount Google Drive
+```python
 from google.colab import drive
 drive.mount('/content/drive')
+```
 
-2️⃣ Change Directory to Project Folder
-
+### 2️⃣ Change to Project Directory
+```python
 import os
 os.chdir('/content/drive/My Drive/dpl_hackathon/')
+```
 
-3️⃣ Open and Run the Notebook
+### 3️⃣ Run the Notebook
+Open `f1_prediction.ipynb` and execute all cells to train and evaluate the model.
 
-Navigate to f1_prediction.ipynb in Colab.
+---
 
-Run all cells to train and evaluate the model.
+## 🛠️ Project Components
 
-🛠️ Project Components
+### 📁 Dataset Files
 
-🔹 Dataset Files
+- `circuits.csv`: Track data (location, altitude)
+- `constructors.csv`: Team info
+- `drivers.csv`: Driver details
+- `lap_times.csv`: Lap-by-lap data
+- `pit_stops.csv`: Pit stop timings
+- `qualifying.csv`: Qualifying results
+- `races.csv`: Schedule and race meta
+- `results.csv`: Final race standings
 
-circuits.csv - Circuit details (location, altitude, country)
+### 🧠 Model Architecture
 
-constructors.csv - Team details & nationalities
+- **Algorithm**: XGBoost Regressor
 
-drivers.csv - Driver information (name, nationality, experience)
+- **Features**:
+  - Driver experience
+  - Constructor strength
+  - Pit stop frequency
+  - Lap time efficiency
+  - Grid position
 
-lap_times.csv - Lap-by-lap performance data
+- **Training**:
+  - 80/20 Train-Test Split
+  - Tuned hyperparameters (learning rate, estimators, depth)
 
-pit_stops.csv - Pit stop timings and frequency
+- **Metrics**:
+  - Mean Absolute Error (MAE)
+  - Root Mean Squared Error (RMSE)
+  - R² Score
 
-qualifying.csv - Qualifying session results
+---
 
-races.csv - Race schedule and results
+## 📊 Key Insights
 
-results.csv - Final race outcomes and driver standings
+- 🧩 Feature importance ranking
+- 📈 Scatterplot: Actual vs. Predicted positions
+- 🔁 Performance trends across drivers and teams
+- 🛣️ Track difficulty impact on rankings
 
-🔹 Model & Training Details
+---
 
-Algorithm Used: XGBoost Regressor
+## 🔮 Future Enhancements
 
-Feature Engineering:
+- 🌦️ Live weather and real-time data integration
+- 🌍 Web deployment via Flask/Django
+- 🧪 Hyperparameter tuning with GridSearchCV
+- ⏱️ Time series & real-time predictions
 
-Driver experience, team strength, pit stop frequency, grid advantage
+---
 
-Lap time efficiency, constructor performance trends
+## 🎯 Conclusion
 
-Train-Test Split: 80% training, 20% testing
+A comprehensive, data-driven approach to Formula 1 race predictions—designed to assist analysts, teams, and enthusiasts. With future support for live data and deployment, this project lays the foundation for an intelligent race strategy tool.
 
-Hyperparameter Tuning: Optimized learning rate, estimators, tree depth
+---
 
-Evaluation Metrics: MAE, RMSE, R² Score
+## 👨‍💻 Author
 
-🔹 Key Outputs & Insights
+**Dhanush Kumar M S**  
+GitHub: [@dhanushkumarms](https://github.com/dhanushkumarms)
 
-Feature Importance: Identifies top race outcome factors
-
-Actual vs Predicted Scatterplot: Evaluates model accuracy
-
-Driver & Constructor Trends: Performance trends over time
-
-Track Difficulty Impact: Influence of circuits on driver rankings
-
-📦 Additional Features
-
-Live Data Integration (Future Scope): Incorporating real-time weather and track conditions.
-
-Web Deployment: Plan to deploy using Flask/Django for interactive predictions.
-
-Hyperparameter Optimization: Future improvements with GridSearchCV for fine-tuning.
-
-🎯 Conclusion
-
-This project provides a data-driven approach to Formula 1 race predictions, helping teams and analysts optimize race strategies. Future enhancements will integrate real-time data, advanced ML models, and web-based prediction tools.
-
-
-
+---
